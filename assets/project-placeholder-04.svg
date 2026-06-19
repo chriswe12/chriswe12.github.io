@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Autonomous planning visual">
+  <rect width="640" height="480" fill="#f7f8fa"/>
+  <rect x="86" y="90" width="468" height="300" rx="18" fill="#ffffff" stroke="#dce1e7" stroke-width="4"/>
+  <path d="M162 328h316" stroke="#17191c" stroke-width="14" stroke-linecap="round"/>
+  <path d="M220 328l52-114h96l52 114z" fill="#8fb7d9"/>
+  <rect x="294" y="158" width="52" height="64" rx="10" fill="#1f5f8b"/>
+  <path d="M180 282c62-42 116-64 164-64 44 0 86 18 126 54" fill="none" stroke="#17191c" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="188" cy="282" r="16" fill="#17191c"/>
+  <circle cx="470" cy="272" r="16" fill="#17191c"/>
+  <rect x="198" y="348" width="92" height="18" rx="9" fill="#dce1e7"/>
+  <rect x="350" y="348" width="92" height="18" rx="9" fill="#dce1e7"/>
+</svg>
