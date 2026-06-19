@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Christof Wellan - robotics software engineering, robot learning, and autonomous systems projects.">
-    <meta name="theme-color" content="#f7f8fa">
-    <title>Christof Wellan | Projects</title>
+    <meta name="theme-color" content="#f8fafc">
+    <title>Christof Wellan</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
@@ -13,190 +13,209 @@
   <body>
     <header class="site-header">
       <a class="brand" href="./" aria-label="Christof Wellan home">
-        <img src="assets/favicon.svg" width="34" height="34" alt="">
+        <img src="assets/favicon.svg" width="28" height="28" alt="">
         <span>Christof Wellan</span>
       </a>
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
+        <a href="#education">Education</a>
       </nav>
     </header>
 
-    <main>
-      <section class="hero" aria-labelledby="page-title">
-        <div class="hero-copy">
-          <p class="eyebrow">Robotics / Software / Autonomous Systems</p>
-          <h1 id="page-title">Christof Wellan</h1>
-          <p class="lede">
-            Mechanical engineering MSc student at ETH Zurich focused on robotics, robot learning, perception, and autonomy.
+    <main class="page-shell">
+      <aside class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">Robotics Software Engineering</p>
+        <h1 id="page-title">Christof Wellan</h1>
+        <p class="lede">
+          Mechanical engineering MSc student at ETH Zurich focused on robot learning, perception, and autonomous systems.
+        </p>
+
+        <div class="quick-links" aria-label="Profile links">
+          <a href="https://www.linkedin.com/in/christof-wellan-17ab0321b/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://github.com/chriswe12" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+
+        <dl class="facts">
+          <div>
+            <dt>Focus</dt>
+            <dd>Robot learning, autonomy, manipulation</dd>
+          </div>
+          <div>
+            <dt>Tools</dt>
+            <dd>Python, PyTorch, ROS 2, Isaac Lab, MuJoCo</dd>
+          </div>
+          <div>
+            <dt>Location</dt>
+            <dd>ETH Zurich</dd>
+          </div>
+        </dl>
+      </aside>
+
+      <div class="content">
+        <section class="section about" aria-labelledby="about-heading">
+          <h2 id="about-heading">About</h2>
+          <p>
+            I work on robotics systems that connect perception, planning, control, and learning. Recent work includes real-world visuomotor policies, autonomous assembly, humanoid motion interfaces, and ROS 2 autonomy stacks.
           </p>
-          <div class="hero-actions" aria-label="Profile links">
-            <a class="button-link primary" href="https://www.linkedin.com/in/christof-wellan-17ab0321b/" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a class="button-link" href="https://github.com/chriswe12" target="_blank" rel="noreferrer">GitHub</a>
-          </div>
-        </div>
+        </section>
 
-        <aside class="profile-panel" aria-label="Current focus">
-          <div>
-            <span class="panel-label">Current focus</span>
-            <strong>Robot learning and autonomous manipulation</strong>
+        <section class="section" id="projects" aria-labelledby="projects-heading">
+          <div class="section-title">
+            <h2 id="projects-heading">Projects</h2>
+            <span>Selected work</span>
           </div>
-          <div>
-            <span class="panel-label">Based around</span>
-            <strong>ETH Zurich</strong>
-          </div>
-          <div>
-            <span class="panel-label">Project areas</span>
-            <strong>ROS 2, Isaac Lab, MuJoCo, PyTorch</strong>
-          </div>
-        </aside>
-      </section>
 
-      <section class="section" id="projects" aria-labelledby="projects-heading">
-        <div class="section-heading">
-          <p class="eyebrow">Selected work</p>
-          <h2 id="projects-heading">Projects</h2>
-        </div>
-
-        <div class="project-grid">
-          <article class="project-card">
-            <img class="project-media" src="assets/project-placeholder-01.svg" alt="">
-            <div class="project-content">
-              <p class="project-date">March 2026 - Present</p>
-              <h3>SO-ARM101 Robot Learning</h3>
-              <p>
-                Trained real-world visuomotor pick-and-place policies and compared ACT, diffusion policies, VLA models, and DAgger on a camera-instrumented robot arm.
-              </p>
-              <div class="tag-list" aria-label="Technologies">
-                <span>Robot learning</span>
-                <span>ACT</span>
-                <span>Isaac Lab</span>
+          <div class="item-list">
+            <article class="item project-item">
+              <div class="item-head">
+                <h3>SO-ARM101 Robot Learning</h3>
+                <span>Mar 2026 - Present</span>
               </div>
-            </div>
-          </article>
+              <p>
+                Trained real-world visuomotor pick-and-place policies on a camera-instrumented robot arm, comparing ACT, diffusion policies, VLA models, and DAgger.
+              </p>
+              <ul class="tags" aria-label="Technologies">
+                <li>Robot learning</li>
+                <li>ACT</li>
+                <li>Isaac Lab</li>
+                <li>Nano World Model</li>
+              </ul>
+            </article>
 
-          <article class="project-card">
-            <img class="project-media" src="assets/project-placeholder-02.svg" alt="">
-            <div class="project-content">
-              <p class="project-date">March 2026 - September 2026</p>
-              <h3>Dual-Arm Assembly Grasp Planning</h3>
+            <article class="item project-item">
+              <div class="item-head">
+                <h3>Dual-Arm Assembly Grasp Planning</h3>
+                <span>Mar 2026 - Sep 2026</span>
+              </div>
               <p>
                 Developing task-aware grasp planning and execution for autonomous dual-arm assembly on KUKA iiwa 7 robots.
               </p>
-              <div class="tag-list" aria-label="Technologies">
-                <span>Manipulation</span>
-                <span>Planning</span>
-                <span>RL control</span>
-              </div>
-            </div>
-          </article>
+              <ul class="tags" aria-label="Technologies">
+                <li>Manipulation</li>
+                <li>Constraint filtering</li>
+                <li>RL control</li>
+              </ul>
+            </article>
 
-          <article class="project-card">
-            <img class="project-media" src="assets/project-placeholder-03.svg" alt="">
-            <div class="project-content">
-              <p class="project-date">May 2026</p>
-              <h3>Unitree G1 Control Interface</h3>
+            <article class="item project-item">
+              <div class="item-head">
+                <h3>Unitree G1 Control Interface</h3>
+                <span>May 2026</span>
+              </div>
               <p>
-                Built a motion-control interface for the Unitree G1 with text-prompted motion generation, MuJoCo preview, and real-robot deployment.
+                Built a text-prompted motion interface for the Unitree G1 with MuJoCo preview, real-robot deployment, Meta Quest teleoperation, and demonstration collection.
               </p>
-              <div class="tag-list" aria-label="Technologies">
-                <span>Humanoid robotics</span>
-                <span>MuJoCo</span>
-                <span>Teleoperation</span>
-              </div>
-            </div>
-          </article>
+              <ul class="tags" aria-label="Technologies">
+                <li>Humanoid robotics</li>
+                <li>MuJoCo</li>
+                <li>Teleoperation</li>
+              </ul>
+            </article>
 
-          <article class="project-card">
-            <img class="project-media" src="assets/project-placeholder-04.svg" alt="">
-            <div class="project-content">
-              <p class="project-date">March 2025 - June 2025</p>
-              <h3>Excavator Planning Agent</h3>
+            <article class="item project-item">
+              <div class="item-head">
+                <h3>Excavator Planning Agent</h3>
+                <span>Mar 2025 - Jun 2025</span>
+              </div>
               <p>
-                Built a VLM agent for high-level autonomous excavator planning in Isaac Lab, with ROS 2 action servers for low-level policy execution.
+                Built a VLM agent for autonomous high-level excavator planning in Isaac Lab with ROS 2 action servers for low-level control policies.
               </p>
-              <div class="tag-list" aria-label="Technologies">
-                <span>VLMs</span>
-                <span>ROS 2</span>
-                <span>Autonomy</span>
+              <ul class="tags" aria-label="Technologies">
+                <li>VLMs</li>
+                <li>ROS 2</li>
+                <li>Isaac Lab</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="experience" aria-labelledby="experience-heading">
+          <div class="section-title">
+            <h2 id="experience-heading">Experience</h2>
+            <span>Recent roles</span>
+          </div>
+
+          <div class="item-list compact-list">
+            <article class="item">
+              <div class="item-head">
+                <h3>Robotics Software Engineering Intern, Avientus</h3>
+                <span>Sep 2025 - Feb 2026</span>
               </div>
+              <p>
+                Led a real-time visual detection, tracking, and semantic target-search pipeline for last-mile drone delivery, including Jetson AGX Orin deployment and ROS 2 autonomy-stack integration.
+              </p>
+            </article>
+
+            <article class="item">
+              <div class="item-head">
+                <h3>Summer Intern, Bosch GmbH</h3>
+                <span>Jul 2023 - Aug 2023</span>
+              </div>
+              <p>
+                Performed Hardware-in-the-Loop tests on inverter units and documented validation cases for fault-handling procedures.
+              </p>
+            </article>
+
+            <article class="item">
+              <div class="item-head">
+                <h3>Teaching Assistant, TU Vienna</h3>
+                <span>Oct 2023 - Jun 2024</span>
+              </div>
+              <p>Supported Mechanics of Solid Bodies coursework for mechanical engineering students.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section two-column" id="education" aria-labelledby="education-heading">
+          <div>
+            <div class="section-title">
+              <h2 id="education-heading">Education</h2>
             </div>
-          </article>
-        </div>
-      </section>
+            <div class="item-list compact-list">
+              <article class="item">
+                <div class="item-head">
+                  <h3>ETH Zurich</h3>
+                  <span>2024 - 2026</span>
+                </div>
+                <p>MSc Mechanical Engineering, focus on robotics.</p>
+              </article>
+              <article class="item">
+                <div class="item-head">
+                  <h3>TU Vienna</h3>
+                  <span>2021 - 2024</span>
+                </div>
+                <p>BSc Mechanical Engineering, passed with distinction.</p>
+              </article>
+            </div>
+          </div>
 
-      <section class="section split" id="experience" aria-labelledby="experience-heading">
-        <div class="section-heading sticky-heading">
-          <p class="eyebrow">Background</p>
-          <h2 id="experience-heading">Experience</h2>
-        </div>
-
-        <div class="timeline">
-          <article class="timeline-item">
-            <p class="project-date">September 2025 - February 2026</p>
-            <h3>Robotics Software Engineering Intern, Avientus</h3>
-            <p>
-              Led a real-time visual detection, tracking, and semantic target-search pipeline for last-mile drone delivery, including model fine-tuning, Jetson AGX Orin deployment, and ROS 2 autonomy-stack integration.
-            </p>
-          </article>
-
-          <article class="timeline-item">
-            <p class="project-date">July 2023 - August 2023</p>
-            <h3>Summer Intern, Bosch GmbH</h3>
-            <p>
-              Performed Hardware-in-the-Loop tests on inverter units and documented validation cases for fault-handling procedures.
-            </p>
-          </article>
-
-          <article class="timeline-item">
-            <p class="project-date">October 2023 - June 2024</p>
-            <h3>Teaching Assistant, TU Vienna</h3>
-            <p>
-              Supported Mechanics of Solid Bodies coursework for mechanical engineering students.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section split" aria-labelledby="education-heading">
-        <div class="section-heading sticky-heading">
-          <p class="eyebrow">Education and skills</p>
-          <h2 id="education-heading">Profile</h2>
-        </div>
-
-        <div class="info-grid">
-          <article class="info-card">
-            <h3>Education</h3>
-            <p><strong>ETH Zurich</strong><br>MSc Mechanical Engineering, focus on robotics</p>
-            <p><strong>TU Vienna</strong><br>BSc Mechanical Engineering, passed with distinction</p>
-          </article>
-
-          <article class="info-card">
-            <h3>Technical skills</h3>
-            <p>Python, PyTorch, MATLAB/Simulink, C/C++, ROS 2, Isaac Lab, MuJoCo, Docker, Git</p>
-          </article>
-
-          <article class="info-card">
-            <h3>CAD and tools</h3>
-            <p>SolidWorks, Creo, Autodesk Fusion</p>
-          </article>
-
-          <article class="info-card">
-            <h3>Languages</h3>
-            <p>German native, English C2</p>
-          </article>
-        </div>
-      </section>
+          <div>
+            <div class="section-title">
+              <h2>Skills</h2>
+            </div>
+            <ul class="skill-cloud" aria-label="Skills">
+              <li>Python</li>
+              <li>PyTorch</li>
+              <li>ROS 2</li>
+              <li>Isaac Lab</li>
+              <li>MuJoCo</li>
+              <li>C/C++</li>
+              <li>MATLAB/Simulink</li>
+              <li>Docker</li>
+              <li>Git</li>
+              <li>SolidWorks</li>
+              <li>Creo</li>
+              <li>Fusion</li>
+            </ul>
+          </div>
+        </section>
+      </div>
     </main>
 
-    <footer class="site-footer" id="contact">
-      <span>Christof Wellan</span>
-      <div class="footer-links" aria-label="Footer links">
-        <a href="https://www.linkedin.com/in/christof-wellan-17ab0321b/" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a href="https://github.com/chriswe12" target="_blank" rel="noreferrer">GitHub</a>
-      </div>
-      <span>&copy; <span data-year>2026</span></span>
+    <footer class="site-footer">
+      <span>&copy; <span data-year>2026</span> Christof Wellan</span>
+      <a href="https://www.linkedin.com/in/christof-wellan-17ab0321b/" target="_blank" rel="noreferrer">LinkedIn</a>
     </footer>
   </body>
 </html>
