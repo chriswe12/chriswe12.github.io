@@ -76,7 +76,7 @@ p, h1, h2, h3, li, span { overflow-wrap: anywhere; }
 .side-inner {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  min-height: calc(100vh - 128px);
   max-width: 360px;
 }
 
@@ -171,9 +171,12 @@ p, h1, h2, h3, li, span { overflow-wrap: anywhere; }
 }
 
 .side-social {
+  position: absolute;
+  bottom: 48px;
+  left: 48px;
   display: flex;
   gap: 18px;
-  margin: auto 0 0;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
@@ -268,6 +271,7 @@ p, h1, h2, h3, li, span { overflow-wrap: anywhere; }
   background: var(--bg-card);
   box-shadow: var(--shadow-sm);
   object-fit: contain;
+  padding: 5px;
 }
 .timeline-logo--text {
   color: var(--border-strong);
@@ -516,6 +520,10 @@ p, h1, h2, h3, li, span { overflow-wrap: anywhere; }
   :root { --main-pad: 64px; }
   .main { padding: var(--main-pad) 48px var(--main-pad) 32px; }
   .side { padding: 64px 32px 32px; }
+  .side-social {
+    bottom: 32px;
+    left: 32px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -525,9 +533,15 @@ p, h1, h2, h3, li, span { overflow-wrap: anywhere; }
     height: auto;
     padding: 56px 32px 24px;
   }
-  .side-inner { max-width: 100%; }
+  .side-inner {
+    min-height: 0;
+    max-width: 100%;
+  }
   .side-nav { margin-top: 24px; }
-  .side-social { margin: 24px 0 0; }
+  .side-social {
+    position: static;
+    margin: 24px 0 0;
+  }
   .main { padding: 32px 32px 56px; }
   .section { margin-bottom: 48px; }
   .side-avatar { width: 72px; height: 72px; }
