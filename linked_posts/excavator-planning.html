@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#F5F4EF">
+    <title>Excavator Planning Agent | Christof Wellan</title>
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <main class="detail-page">
+      <a class="detail-back" href="../index.html#projects"><span aria-hidden="true">&lt;-</span> Back</a>
+      <article class="detail-article">
+        <p class="detail-kicker">Project · ETH Robotic Systems Lab</p>
+        <h1>Excavator Planning Agent</h1>
+        <p class="detail-subtitle">VLM planning · Isaac Lab · ROS 2 action servers</p>
+        <p>This semester project built a vision-language-model agent for autonomous high-level excavator planning in Isaac Lab. The task was to clear a rock field in simulation by producing useful high-level decisions rather than directly hand-coding the full behavior.</p>
+        <p>The VLM agent interpreted the scene and selected actions, while ROS 2 action servers connected those high-level decisions to low-level control policies. This kept the language-level planning layer separate from the execution layer and made the system easier to test.</p>
+        <p>The result was a successful demonstration of a simulated excavator clearing a rock field, with the VLM agent handling task-level planning and ROS 2 providing the interface to executable robot behaviors.</p>
+
+      </article>
+    </main>
+  </body>
+</html>

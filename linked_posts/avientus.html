@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#F5F4EF">
+    <title>Autonomous Drone Perception Stack | Christof Wellan</title>
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <main class="detail-page">
+      <a class="detail-back" href="../index.html#experience"><span aria-hidden="true">&lt;-</span> Back</a>
+      <article class="detail-article">
+        <p class="detail-kicker">Experience · Avientus</p>
+        <h1>Autonomous Drone Perception Stack</h1>
+        <p class="detail-subtitle">SPRIND Fully Autonomous Flight Challenge 2.0 · Jetson AGX Orin · YOLO · Qwen3-VL · GroundingDINO</p>
+        <p>During my internship at Avientus, I worked in a three-person team on an autonomous drone system for the SPRIND Fully Autonomous Flight Challenge 2.0. My responsibility was perception; the rest of the system covered planning and navigation. The goal was to make the perception stack reliable enough for autonomous operation on a real drone, under edge-compute constraints.</p>
+        <p>The challenge had two tasks. In the last-mile delivery task, the drone had to find the correct house number, identify the relevant nearby object, and verify the result robustly. In the search-and-rescue task, it had to find and track a person matching a given description. Both tasks had to run onboard and feed useful outputs into the autonomy stack.</p>
+        <p>For last-mile delivery, I built a multi-stage perception pipeline. A fine-tuned YOLO model detected house numbers, Qwen3-VL 8B read the number to confirm the target address, GroundingDINO performed open-vocabulary detection of nearby target objects, and a final VLM verification step filtered false positives from the real-time detector. The point was to combine fast detection with semantic verification instead of relying on a single model.</p>
+        <p>For search and rescue, YOLO-seg detected and segmented people, and the vision-language model checked whether a detected person matched the requested attributes. Because the drone used a stereo camera setup, the segmentation output also gave a useful basis for estimating depth and position, making detections directly useful for planning.</p>
+        <p>The hardest part was making the full perception system run reliably on an NVIDIA Jetson AGX Orin while integrating with the real drone stack. That included model deployment, timing, networking, and ensuring that data arrived without drops. The team advanced from stage 1 to stage 2 and received a EUR 325k award.</p>
+
+      </article>
+    </main>
+  </body>
+</html>

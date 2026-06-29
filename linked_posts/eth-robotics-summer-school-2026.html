@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#F5F4EF">
+    <title>ETH Robotics Summer School 2026 | Christof Wellan</title>
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <main class="detail-page">
+      <a class="detail-back" href="../index.html#projects"><span aria-hidden="true">&lt;-</span> Back</a>
+      <article class="detail-article">
+        <p class="detail-kicker">Project · Autonomous Exploration</p>
+        <h1>ETH Robotics Summer School 2026</h1>
+        <p class="detail-subtitle">Unitree A2 · RESPLE · TARE · MuJoCo · Bag replay</p>
+        <p>At the ETH Robotics Summer School 2026, our team worked on autonomous exploration with a Unitree A2 quadruped in a disaster-response scenario. The goal was to send the robot into an unknown environment, let it explore autonomously, build a map, and report the positions of objects of interest.</p>
+        <p>The project was not about implementing SLAM or planning algorithms from scratch. It was about taking an existing autonomy stack and making it work reliably on a real robot in a real environment.</p>
+        <p>We used RESPLE for LiDAR-based state estimation and mapping, and TARE for autonomous exploration planning. To prepare and test the system, we worked in MuJoCo simulation, created maps for planner evaluation, and replayed recorded data to understand how different parts of the stack behaved before deploying on hardware.</p>
+        <p>After simulation and replay testing, we moved to real robot trials. The main work was tuning the system until the robot could follow exploration goals safely and produce a usable map.</p>
+        <p>My main contribution was tuning the local planner and validating the navigation behavior on the Unitree A2. I adjusted planner and traversability parameters, tested how the robot reacted to exploration goals, checked whether planned paths were feasible for the quadruped, and debugged the interaction between mapping, state estimation, terrain representation, and collision avoidance.</p>
+        <p>I also did a large part of the real robot testing, iterating between simulation, bag replay, and field runs to identify failure cases and improve the behavior.</p>
+
+      </article>
+    </main>
+  </body>
+</html>
