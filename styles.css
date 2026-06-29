@@ -23,8 +23,9 @@
 }
 
 * { box-sizing: border-box; }
-html { min-width: 320px; scroll-behavior: smooth; }
+html { min-width: 320px; overflow-x: hidden; scroll-behavior: smooth; }
 body {
+  overflow-x: hidden;
   margin: 0;
   background: var(--bg);
   color: var(--text);
