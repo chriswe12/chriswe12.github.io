@@ -17,10 +17,54 @@
       <article class="detail-article">
         <p class="detail-kicker">Project · Independent</p>
         <h1>SO-ARM101 Robot Learning</h1>
-        <p class="detail-subtitle">ACT · Diffusion policy · VLA · DAgger · Isaac Lab · Nano World Model</p>
-        <p>This project focused on learning real-world visuomotor pick-and-place behavior on a camera-instrumented SO-ARM101 arm. I used it as a compact hardware platform for comparing policy-learning approaches under realistic sensing and execution constraints.</p>
-        <p>I compared ACT, diffusion policies, a VLA model, and DAgger-style data aggregation on the same manipulation setting. The goal was not just to train one successful policy, but to see how each approach handled camera observations, limited demonstrations, compounding errors, and the gap between offline data and real execution.</p>
-        <p>In parallel, I built an Isaac Lab reinforcement-learning pick-and-place pipeline from scratch. I trained a privileged-state teacher policy, distilled it into a visual-motor student, and fine-tuned a Nano World Model on public robot data plus self-collected SO-ARM101 data to explore how predictive models can support policy learning and evaluation.</p>
+        <p class="detail-subtitle">Real-world imitation learning · Isaac Lab sim-to-real · Nano World Model evaluation</p>
+        <figure class="detail-media detail-media--camera">
+          <video controls autoplay muted loop playsinline preload="metadata" poster="../assets/so-arm101/deploy-cover.jpg">
+            <source src="../assets/so-arm101/deploy-preview.mp4" type="video/mp4">
+          </video>
+        </figure>
+        <p>This SO-ARM101 project has three connected tracks: real-world imitation learning, Isaac Lab simulation for teacher/student policy learning, and world-model experiments for adapting predictive video models to my robot setup.</p>
+
+        <section class="detail-section">
+          <h2 class="detail-section-title">Real-World Imitation Learning</h2>
+          <p>I trained and tested ACT-style policies, VLA models, and SmolVLA variants on real SO-ARM101 manipulation data. A large part of the work was practical experimentation: changing objects, testing how policies behaved under slightly different setups, and repeatedly seeing how much teleoperation quality, camera placement, lighting, object visibility, and demonstration consistency affected the resulting behavior.</p>
+          <p>The deployment media below uses the same first 5.5 seconds of a LeRobot smoke run at 30 fps. It records synchronized top and wrist camera streams, commanded actions, and observed robot joint state for the six SO-ARM101 position channels.</p>
+
+          <figure class="detail-media detail-media--deployment">
+            <video controls preload="metadata" poster="../assets/so-arm101/deploy-side-by-side-cover.jpg" autoplay muted loop playsinline>
+              <source src="../assets/so-arm101/deploy-side-by-side.mp4" type="video/mp4">
+            </video>
+          </figure>
+
+          <figure class="detail-media">
+            <img src="../assets/so-arm101/joint-over-time.svg" alt="SO-ARM101 observed state and commanded action trajectories over time" loading="lazy">
+            <figcaption>Observed joint state and commanded action trajectories over the same first 5.5 seconds.</figcaption>
+          </figure>
+        </section>
+
+        <section class="detail-section">
+          <h2 class="detail-section-title">Isaac Lab Sim-To-Real</h2>
+          <p>In parallel, I built an Isaac Lab pick-and-place pipeline from scratch. The simulation track uses a privileged-state teacher policy and distills it into a student visuomotor policy that must act from camera observations instead of privileged simulator state.</p>
+          <p>The current focus is sim-to-real transfer: making the simulated task, observation stack, control interface, and student policy robust enough to move from Isaac Lab to the physical SO-ARM101 setup. The video below is shown at half-speed playback.</p>
+
+          <figure class="detail-media detail-media--sim">
+            <video controls muted loop playsinline preload="metadata" poster="../assets/so-arm101/isaaclab-sim-cover.jpg" autoplay>
+              <source src="../assets/so-arm101/isaaclab-sim-half-speed.mp4" type="video/mp4">
+            </video>
+          </figure>
+        </section>
+
+        <section class="detail-section">
+          <h2 class="detail-section-title">Nano World Model Tests</h2>
+          <p>I also tested <a class="detail-inline-link" href="https://github.com/simchowitzlabpublic/nano-world-model" target="_blank" rel="noreferrer">Nano World Model</a> on SO-ARM101 data. I started from the SO-101 datasets released with MolmoACT, manually went through the available multi-view datasets, and sorted them into categories by viewpoint and setup similarity.</p>
+          <p>For the first adaptation pass, I selected datasets with a top-view camera setup close to mine and trained from the RT-1 checkpoint toward SO-101 behavior. I then fine-tuned on my own collected datasets to make the model match my specific camera placement, robot, lighting, and workspace.</p>
+
+          <figure class="detail-media detail-media--world-model">
+            <video controls muted loop playsinline preload="metadata" poster="../assets/so-arm101/world-model-side-by-side-18-cover.jpg" autoplay>
+              <source src="../assets/so-arm101/world-model-side-by-side-18.mp4" type="video/mp4">
+            </video>
+          </figure>
+        </section>
 
       </article>
     </main>

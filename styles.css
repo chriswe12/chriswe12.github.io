@@ -649,6 +649,18 @@ p, h1, h2, h3, li, span { overflow-wrap: anywhere; }
 .detail-article p:last-child {
   margin-bottom: 0;
 }
+.detail-section {
+  margin-top: 38px;
+}
+.detail-section-title {
+  margin: 0 0 14px;
+  color: var(--text);
+  font-size: 22px;
+  line-height: 1.25;
+}
+.detail-section .detail-media:first-child {
+  margin-top: 18px;
+}
 
 @media (max-width: 600px) {
   .detail-page {
@@ -674,6 +686,21 @@ p, h1, h2, h3, li, span { overflow-wrap: anywhere; }
 }
 .detail-media video {
   aspect-ratio: 1 / 1;
+}
+.detail-media--camera video {
+  aspect-ratio: 4 / 3;
+}
+.detail-media--deployment video {
+  aspect-ratio: 8 / 3;
+  object-fit: contain;
+}
+.detail-media--sim video {
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+}
+.detail-media--world-model video {
+  aspect-ratio: 2 / 1;
+  object-fit: contain;
 }
 .detail-media figcaption {
   margin: 10px 2px 0;
