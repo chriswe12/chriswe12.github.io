@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#F5F4EF">
+    <title>Applied Finite Element Analysis | Christof Wellan</title>
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css?v=20260629-1">
+  </head>
+  <body>
+    <main class="detail-page">
+      <a class="detail-back" href="../index.html#projects"><span aria-hidden="true">&lt;-</span> Back</a>
+      <article class="detail-article">
+        <p class="detail-kicker">Project · TU Wien finite element coursework</p>
+        <h1>Applied Finite Element Analysis</h1>
+        <p class="detail-subtitle">HyperMesh · OptiStruct · solid/shell/beam models · modal and buckling analysis</p>
+
+        <figure class="detail-media detail-media--wide">
+          <video controls autoplay muted loop playsinline preload="metadata" poster="../assets/fem/fem-cover.jpg">
+            <source src="../assets/fem/fem-preview.mp4" type="video/mp4">
+          </video>
+          <figcaption>Short preview of selected FEM result plots from the two course projects.</figcaption>
+        </figure>
+
+        <p>I completed two TU Wien finite-element method project sequences focused on practical structural simulation workflows in Altair HyperMesh/HyperView with OptiStruct. The work covered model preparation, discretization choices, load and boundary-condition modelling, solver setup, postprocessing, and comparison against analytical reference solutions.</p>
+        <p>The first sequence, <em>Finite Elemente in der Anwendung</em>, covered fundamentals through applied examples: hexahedral meshing of a hinge, stress and deformation evaluation around a hole, Bernoulli and Timoshenko beam comparisons, beam-solid transitions with rigid elements, modal analysis, and linear buckling of a thin-walled tube.</p>
+        <p>The second sequence, <em>Praxisgerechter Einsatz von FE-Methoden</em>, used a more practice-oriented gearbox shaft and bearing setup. I modelled alternative bearing assumptions, evaluated critical stress regions, extracted reaction forces and moments, plotted signed von Mises stress along paths, inspected cylindrical stress tensor components, and ran modal analyses with simplified attached components and stiffness/inertia boundary conditions.</p>
+
+        <div class="detail-video-grid" aria-label="Finite element analysis result images">
+          <figure class="detail-media">
+            <img src="../assets/fem/hinge-joint-fringe.png" alt="Hinge and joint displacement fringe plot" loading="lazy">
+            <figcaption>Displacement fringe plot for a hinge and joint stiffness model.</figcaption>
+          </figure>
+          <figure class="detail-media">
+            <img src="../assets/fem/gear-shaft-stress.png" alt="Gear shaft stress fringe plot" loading="lazy">
+            <figcaption>Stress analysis of a gearbox shaft model with bearing assumptions.</figcaption>
+          </figure>
+          <figure class="detail-media">
+            <img src="../assets/fem/solid-beam-transition.png" alt="Stress field around solid-to-beam transition" loading="lazy">
+            <figcaption>Stress evaluation near a solid-to-beam transition with rigid coupling.</figcaption>
+          </figure>
+          <figure class="detail-media">
+            <img src="../assets/fem/signed-von-mises-path.png" alt="Signed von Mises stress along a critical path" loading="lazy">
+            <figcaption>Signed von Mises stress extracted along a critical path.</figcaption>
+          </figure>
+          <figure class="detail-media">
+            <img src="../assets/fem/buckling-mode.png" alt="Linear buckling mode result" loading="lazy">
+            <figcaption>Linear buckling mode and critical-load evaluation.</figcaption>
+          </figure>
+          <figure class="detail-media">
+            <img src="../assets/fem/modal-model-view.png" alt="Modal analysis model view" loading="lazy">
+            <figcaption>Modal model including simplified neighboring components and boundary stiffness.</figcaption>
+          </figure>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>

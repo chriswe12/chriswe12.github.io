@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#F5F4EF">
+    <title>Spaceship Trajectory Planning | Christof Wellan</title>
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css?v=20260629-1">
+  </head>
+  <body>
+    <main class="detail-page">
+      <a class="detail-back" href="../index.html#projects"><span aria-hidden="true">&lt;-</span> Back</a>
+      <article class="detail-article">
+        <p class="detail-kicker">Project · Planning and Decision Making for Autonomous Robots</p>
+        <h1>Spaceship Trajectory Planning</h1>
+        <p class="detail-subtitle">SCvx · CVXPY/ECOS · first-order-hold discretization · closed-loop replanning</p>
+
+        <figure class="detail-media detail-media--hero">
+          <img src="../assets/spaceship/spaceship-cover.jpg" alt="Spaceship trajectory around moving satellites" loading="eager">
+        </figure>
+
+        <p>The exercise was to implement the planning stack for a simulated spaceship agent. In closed-loop evaluation, the simulator repeatedly provided the spaceship state and obstacle states, and the agent had to return actuation commands for thrust and thrust-angle rate while keeping the existing simulator interface intact.</p>
+        <p>The task combined nonlinear vehicle dynamics with mission constraints: reach the target position, orientation, and velocity; finish with zero terminal input; keep enough mass/fuel; stay inside the allowed map bounds; respect thrust, steering-angle, and steering-rate limits; and avoid planets and moving satellites. The tested scenarios covered a planet-only docking task, a planet-and-satellites task with a static target, and a planet-and-satellites docking task.</p>
+        <p>I implemented the planner using sequential convexification. The nonlinear spaceship model and its Jacobians were generated with SymPy, then discretized with first-order hold over a 50-step horizon. Each convex subproblem was solved with CVXPY/ECOS using virtual-control slack variables, linearized obstacle constraints, a trust-region update, and an objective balancing final time, fuel/control effort, and constraint violation penalties.</p>
+        <p>The runtime agent tracked the planned command sequence and triggered replanning when the measured state diverged from the expected trajectory. This made the solution work as a closed-loop controller rather than a one-shot open-loop path, which was important for moving satellites and simulator deviations.</p>
+
+        <div class="detail-video-grid" aria-label="Spaceship scenario videos">
+          <figure class="detail-media">
+            <video controls preload="metadata" poster="../assets/spaceship/spaceship-cover.jpg">
+              <source src="../assets/spaceship/spaceship-satellites.mp4" type="video/mp4">
+            </video>
+            <figcaption>Planet and satellite avoidance with docking constraints.</figcaption>
+          </figure>
+          <figure class="detail-media">
+            <video controls preload="metadata" poster="../assets/spaceship/spaceship-cover.jpg">
+              <source src="../assets/spaceship/spaceship-planet.mp4" type="video/mp4">
+            </video>
+            <figcaption>Planet-only scenario with a fixed docking goal.</figcaption>
+          </figure>
+          <figure class="detail-media">
+            <video controls preload="metadata" poster="../assets/spaceship/spaceship-cover.jpg">
+              <source src="../assets/spaceship/spaceship-satellites-diff.mp4" type="video/mp4">
+            </video>
+            <figcaption>Alternate satellite configuration used for evaluation.</figcaption>
+          </figure>
+        </div>
+
+        <p><a class="detail-inline-link" href="https://pdm4ar.github.io/exercises/11-spaceship.html" target="_blank" rel="noreferrer">Original exercise page</a></p>
+      </article>
+    </main>
+  </body>
+</html>

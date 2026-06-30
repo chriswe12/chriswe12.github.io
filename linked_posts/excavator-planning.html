@@ -18,9 +18,21 @@
         <p class="detail-kicker">Project · ETH Robotic Systems Lab</p>
         <h1>Excavator Planning Agent</h1>
         <p class="detail-subtitle">VLM planning · Isaac Lab · ROS 2 action servers</p>
-        <p>This semester project built a vision-language-model agent for autonomous high-level excavator planning in Isaac Lab. The task was to clear a rock field in simulation by producing useful high-level decisions rather than directly hand-coding the full behavior.</p>
+        <figure class="detail-media detail-media--wide">
+          <video controls autoplay muted loop playsinline preload="metadata" poster="../assets/excavator/excavator-cover.jpg">
+            <source src="../assets/excavator/excavator-demo.mp4" type="video/mp4">
+          </video>
+          <figcaption>Presentation demo of the VLM planner commanding the simulated excavator.</figcaption>
+        </figure>
+
+        <p>This ETH Robotic Systems Lab semester project built a vision-language-model agent for autonomous high-level excavator planning in Isaac Lab. The task was to clear a rock field in simulation by producing useful high-level decisions rather than directly hand-coding the full behavior.</p>
         <p>The VLM agent interpreted the scene and selected actions, while ROS 2 action servers connected those high-level decisions to low-level control policies. This kept the language-level planning layer separate from the execution layer and made the system easier to test.</p>
-        <p>The result was a successful demonstration of a simulated excavator clearing a rock field, with the VLM agent handling task-level planning and ROS 2 providing the interface to executable robot behaviors.</p>
+
+        <figure class="detail-media detail-media--wide">
+          <img src="../assets/excavator/agent-structure-clean.png" alt="Excavator VLM planning agent structure without pick-up policy branch" loading="lazy">
+          <figcaption>Implemented agent structure: rock-state extraction, VLM planning, and movement command flow. The unimplemented pick-up/drop policy branch is omitted.</figcaption>
+        </figure>
+        <p>The implemented demo focused on scene interpretation, rock-target selection, high-level planning, and movement command flow in simulation. The pick-up/drop policy was not part of the implemented system.</p>
 
       </article>
     </main>

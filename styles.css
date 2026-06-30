@@ -171,9 +171,10 @@ p, h1, h2, h3, li, span { overflow-wrap: anywhere; }
 }
 
 .side-social {
-  position: absolute;
+  position: fixed;
   bottom: 48px;
   left: 48px;
+  z-index: 10;
   display: flex;
   gap: 18px;
   margin: 0;
@@ -364,13 +365,15 @@ p, h1, h2, h3, li, span { overflow-wrap: anywhere; }
   aspect-ratio: 4 / 3;
   background: var(--bg-soft);
 }
-.project-thumb img {
+.project-thumb img,
+.project-thumb video {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.4s ease;
 }
-.project-card:hover .project-thumb img { transform: scale(1.04); }
+.project-card:hover .project-thumb img,
+.project-card:hover .project-thumb video { transform: scale(1.04); }
 .project-body {
   display: flex;
   min-width: 0;
@@ -652,4 +655,93 @@ p, h1, h2, h3, li, span { overflow-wrap: anywhere; }
     width: min(100% - 28px, 860px);
     padding: 36px 0 64px;
   }
+}
+
+.detail-media {
+  margin: 28px 0;
+}
+.detail-media img,
+.detail-media video {
+  width: 100%;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--bg-soft);
+  box-shadow: var(--shadow-md);
+  object-fit: cover;
+}
+.detail-media--hero img {
+  aspect-ratio: 16 / 10;
+}
+.detail-media video {
+  aspect-ratio: 1 / 1;
+}
+.detail-media figcaption {
+  margin: 10px 2px 0;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.5;
+}
+.detail-video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin: 32px 0;
+}
+.detail-video-grid--two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.detail-video-grid .detail-media {
+  margin: 0;
+}
+.detail-inline-link {
+  color: var(--accent);
+  font-weight: 600;
+}
+.detail-inline-link:hover {
+  color: var(--accent-hover);
+}
+.detail-link-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+  margin-top: 24px;
+}
+.detail-slide-section {
+  margin: 36px 0 12px;
+}
+.detail-slide-section h2 {
+  margin: 0 0 18px;
+  color: var(--text);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.detail-slide-grid {
+  display: grid;
+  gap: 18px;
+}
+.detail-slide {
+  background: transparent;
+}
+.detail-slide img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+@media (max-width: 760px) {
+  .detail-video-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.detail-media--wide video {
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+}
+.detail-media--portrait video {
+  max-height: 720px;
+  aspect-ratio: 9 / 16;
+  object-fit: contain;
 }

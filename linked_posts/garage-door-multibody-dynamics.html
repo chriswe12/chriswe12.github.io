@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#F5F4EF">
+    <title>Garage Door Multibody Dynamics | Christof Wellan</title>
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css?v=20260629-1">
+  </head>
+  <body>
+    <main class="detail-page">
+      <a class="detail-back" href="../index.html#projects"><span aria-hidden="true">&lt;-</span> Back</a>
+      <article class="detail-article">
+        <p class="detail-kicker">Project · Multibody System Dynamics</p>
+        <h1>Garage Door Multibody Dynamics</h1>
+        <p class="detail-subtitle">Lagrange mechanics · MATLAB ode45 · SIMPACK · reaction-force analysis</p>
+
+        <figure class="detail-media detail-media--wide">
+          <video controls autoplay muted loop playsinline preload="metadata" poster="../assets/mbd/mbd-cover.jpg">
+            <source src="../assets/mbd/garage-door-simpack.mp4" type="video/mp4">
+          </video>
+          <figcaption>SIMPACK animation of the constrained garage-door mechanism.</figcaption>
+        </figure>
+
+        <p>The assignment was to determine the motion of a garage door that slides horizontally at one end, is connected to a rotating lever at the other end, and is assisted by a spring. The door starts from rest, and the motion had to be evaluated for several spring constants, including the optimal value where the door just reaches the vertical position with zero velocity.</p>
+        <p>I first derived the missing geometry from the given mechanism layout, including the spring anchor position, relaxed spring length, and the optimal spring stiffness from an energy balance. I then used the door angle as the generalized coordinate, expressed the lever angle and sliding constraint in terms of it, and derived the nonlinear equation of motion with Lagrange equations of the second kind.</p>
+        <p>The analytical model was implemented in MATLAB and solved numerically with <code>ode45</code>. After the trajectory was known, I recovered the bearing and joint forces at the sliding support, door-lever joint, lever bearing, and spring anchor using center-of-mass acceleration, angular acceleration, force balances, and moment balance.</p>
+        <p>In parallel, I built the same system in SIMPACK: the garage door as a rigid body with planar rotation and horizontal sliding, the lever as a nearly massless rigid body, the spring as a force element, and constrained joints for the supports. I compared MATLAB and SIMPACK results for angle, angular velocity, position, and bearing forces across different spring stiffnesses.</p>
+
+        <div class="detail-video-grid" aria-label="Multibody dynamics diagrams and plots">
+          <figure class="detail-media">
+            <img src="../assets/mbd/garage-door-mechanism.png" alt="Garage door mechanism geometry" loading="lazy">
+            <figcaption>Mechanism geometry used for the coordinate derivation.</figcaption>
+          </figure>
+          <figure class="detail-media">
+            <img src="../assets/mbd/deformed-system.svg" alt="Deformed garage-door mechanism with generalized coordinates" loading="lazy">
+            <figcaption>Generalized coordinate setup for the deformed configuration.</figcaption>
+          </figure>
+          <figure class="detail-media">
+            <img src="../assets/mbd/free-body-force-plan.svg" alt="Free body diagram with bearing and spring forces" loading="lazy">
+            <figcaption>Free-body force diagram used for reaction-force recovery.</figcaption>
+          </figure>
+          <figure class="detail-media">
+            <img src="../assets/mbd/simpack-topology.png" alt="SIMPACK topology of the multibody model" loading="lazy">
+            <figcaption>SIMPACK topology of the constrained mechanism model.</figcaption>
+          </figure>
+          <figure class="detail-media">
+            <img src="../assets/mbd/c075-angle.png" alt="MATLAB and SIMPACK angle comparison for spring stiffness 0.75 c optimum" loading="lazy">
+            <figcaption>MATLAB and SIMPACK angle/angular-velocity comparison.</figcaption>
+          </figure>
+          <figure class="detail-media">
+            <img src="../assets/mbd/copt-forces.png" alt="Bearing force comparison for optimal spring stiffness" loading="lazy">
+            <figcaption>Bearing-force comparison for the optimal spring stiffness.</figcaption>
+          </figure>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>

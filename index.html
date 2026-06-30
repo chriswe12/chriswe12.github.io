@@ -69,18 +69,18 @@
           <h2 class="section-title"><span class="num">02.</span> Experience</h2>
           <ol class="timeline">
             <li class="timeline-item">
-              <div class="timeline-logo-cell"><span class="timeline-logo timeline-logo--text">AV</span></div>
+              <div class="timeline-logo-cell"><img class="timeline-logo" src="assets/avientus-logo.jpg" alt="Avientus" loading="lazy"></div>
               <div class="timeline-main">
                 <div class="timeline-period">Sep 2025 - Feb 2026</div>
                 <div class="timeline-body">
                   <h3 class="timeline-role">Robotics Software Engineering Intern <span class="timeline-org">· Avientus</span></h3>
-                  <p class="timeline-detail">Built the perception stack for an autonomous drone system in the SPRIND Fully Autonomous Flight Challenge 2.0, covering last-mile delivery and search-and-rescue perception under real-time edge-compute constraints.</p>
+                  <p class="timeline-detail">Led perception for an autonomous drone stack in the SPRIND Fully Autonomous Flight Challenge 2.0, combining fine-tuned detection/tracking, semantic prompt-driven target search, and Jetson AGX Orin deployment under real-time edge constraints.</p>
                   <a href="linked_posts/avientus.html" class="timeline-details-link">Details <span aria-hidden="true">-&gt;</span></a>
                 </div>
               </div>
             </li>
             <li class="timeline-item">
-              <div class="timeline-logo-cell"><span class="timeline-logo timeline-logo--text">TU</span></div>
+              <div class="timeline-logo-cell"><img class="timeline-logo" src="assets/tu-wien-logo.png" alt="TU Vienna" loading="lazy"></div>
               <div class="timeline-main">
                 <div class="timeline-period">Oct 2023 - Jun 2024</div>
                 <div class="timeline-body">
@@ -90,7 +90,7 @@
               </div>
             </li>
             <li class="timeline-item">
-              <div class="timeline-logo-cell"><span class="timeline-logo timeline-logo--text">BO</span></div>
+              <div class="timeline-logo-cell"><img class="timeline-logo" src="assets/bosch-logo.jpg" alt="Bosch" loading="lazy"></div>
               <div class="timeline-main">
                 <div class="timeline-period">Jul 2023 - Aug 2023</div>
                 <div class="timeline-body">
@@ -110,13 +110,13 @@
               <div class="project-body">
                 <h3 class="project-title">SO-ARM101 Robot Learning</h3>
                 <p class="project-category">ACT · Diffusion policy · DAgger · Isaac Lab · Nano World Model</p>
-                <p class="project-summary">Trained real-world visuomotor pick-and-place policies on a camera-instrumented SO-ARM101 and compared imitation-learning and VLA-style approaches against an Isaac Lab RL baseline.</p>
+                <p class="project-summary">Trained camera-based visuomotor pick-and-place on a SO-ARM101 with ACT, diffusion policy, a VLA model, and DAgger, plus a separate Isaac Lab teacher/student RL pipeline and Nano World Model fine-tuning.</p>
                 <div class="project-links"><a class="project-more" href="linked_posts/so-arm101.html">Details <span aria-hidden="true">-&gt;</span></a></div>
               </div>
             </article>
 
             <article class="project-card">
-              <div class="project-thumb"><img src="assets/project-placeholder-02.svg" alt="Dual-Arm Assembly Grasp Planning" loading="lazy"></div>
+              <div class="project-thumb"><img src="assets/dual-arm-assembly/cover.jpg" alt="Dual-Arm Assembly Grasp Planning" loading="lazy"></div>
               <div class="project-body">
                 <h3 class="project-title">Dual-Arm Assembly Grasp Planning</h3>
                 <p class="project-category">Dual-arm assembly · Grasp filtering · Constraint satisfaction · RL control</p>
@@ -126,17 +126,27 @@
             </article>
 
             <article class="project-card">
-              <div class="project-thumb"><img src="assets/project-placeholder-03.svg" alt="Unitree G1 Control Interface" loading="lazy"></div>
+              <div class="project-thumb"><video autoplay muted loop playsinline preload="metadata" poster="assets/rss/top-preview-cover.jpg" aria-label="Unitree A2 quadruped during autonomous exploration testing"><source src="assets/rss/top-preview.mp4" type="video/mp4"></video></div>
               <div class="project-body">
-                <h3 class="project-title">Unitree G1 Control Interface</h3>
-                <p class="project-category">Unitree G1 · Kimodo-G1 · MuJoCo · Meta Quest teleoperation</p>
-                <p class="project-summary">Won 2nd place at EPFL Robohack 2026 with a Unitree G1 interface for text-prompted motion generation, MuJoCo preview, real-robot execution, and VR teleoperation data collection.</p>
+                <h3 class="project-title">ETH Robotics Summer School 2026</h3>
+                <p class="project-category">Unitree A2 · Autonomous exploration · RESPLE · TARE · MuJoCo</p>
+                <p class="project-summary">Worked on autonomous exploration with a Unitree A2 quadruped in a disaster-response scenario, making an existing RESPLE/TARE autonomy stack behave reliably on real hardware.</p>
+                <div class="project-links"><a class="project-more" href="linked_posts/eth-robotics-summer-school-2026.html">Details <span aria-hidden="true">-&gt;</span></a></div>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-thumb"><video autoplay muted loop playsinline preload="metadata" poster="assets/epfl-hack/g1-cover.jpg" aria-label="Unitree G1 control interface demo"><source src="assets/epfl-hack/g1-preview.mp4" type="video/mp4"></video></div>
+              <div class="project-body">
+                <h3 class="project-title">Unitree G1 EPFL Hackathon - 2nd Place</h3>
+                <p class="project-category">EPFL Robohack 2026 · Unitree G1 · Kimodo-G1 · MuJoCo</p>
+                <p class="project-summary">Won 2nd place at EPFL Robohack 2026 with a Unitree G1 interface for text-prompted motion generation, MuJoCo preview, SONIC/GR00T-format conversion, real/sim launch scripts, and VR teleoperation data collection.</p>
                 <div class="project-links"><a class="project-more" href="linked_posts/unitree-g1.html">Details <span aria-hidden="true">-&gt;</span></a></div>
               </div>
             </article>
 
             <article class="project-card">
-              <div class="project-thumb"><img src="assets/project-placeholder-04.svg" alt="Excavator Planning Agent" loading="lazy"></div>
+              <div class="project-thumb"><video autoplay muted loop playsinline preload="metadata" poster="assets/excavator/excavator-cover.jpg" aria-label="Excavator planning agent simulation"><source src="assets/excavator/excavator-demo.mp4" type="video/mp4"></video></div>
               <div class="project-body">
                 <h3 class="project-title">Excavator Planning Agent</h3>
                 <p class="project-category">Vision-language planning · ROS 2 actions · Isaac Lab</p>
@@ -146,12 +156,40 @@
             </article>
 
             <article class="project-card">
-              <div class="project-thumb"><img src="assets/project-placeholder-02.svg" alt="ETH Robotics Summer School 2026" loading="lazy"></div>
+              <div class="project-thumb"><video autoplay muted loop playsinline preload="metadata" poster="assets/spaceship/spaceship-cover.jpg" aria-label="Spaceship trajectory around planets and satellites"><source src="assets/spaceship/spaceship-satellites-diff.mp4" type="video/mp4"></video></div>
               <div class="project-body">
-                <h3 class="project-title">ETH Robotics Summer School 2026</h3>
-                <p class="project-category">Unitree A2 · Autonomous exploration · RESPLE · TARE · MuJoCo</p>
-                <p class="project-summary">Worked on autonomous exploration with a Unitree A2 quadruped in a disaster-response scenario, making an existing RESPLE/TARE autonomy stack behave reliably on real hardware.</p>
-                <div class="project-links"><a class="project-more" href="linked_posts/eth-robotics-summer-school-2026.html">Details <span aria-hidden="true">-&gt;</span></a></div>
+                <h3 class="project-title">Spaceship Trajectory Planning</h3>
+                <p class="project-category">PDM4AR · SCvx · CVXPY · Dynamic obstacle avoidance</p>
+                <p class="project-summary">Built the closed-loop planner for a nonlinear spaceship docking exercise: optimize thrust and steering commands, avoid planets and moving satellites, and replan when tracking drifted.</p>
+                <div class="project-links"><a class="project-more" href="linked_posts/spaceship-trajectory-planning.html">Details <span aria-hidden="true">-&gt;</span></a></div>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-thumb"><img src="assets/linkedin-media/transmission-design-cover.jpg" alt="Two-stage coaxial transmission technical drawing" loading="lazy"></div>
+              <div class="project-body">
+                <h3 class="project-title">Two-Stage Coaxial Transmission Design</h3>
+                <p class="project-category">Creo · GD&amp;T · DIN standards · Bearings · Technical drawings</p>
+                <p class="project-summary">Designed a standards-compliant two-stage coaxial spur gearbox in a three-person team, from component sizing and supplier-part selection to Creo CAD, GD&amp;T drawings, and manufacturing documentation.</p>
+                <div class="project-links"><a class="project-more" href="linked_posts/transmission-design.html">Details <span aria-hidden="true">-&gt;</span></a></div>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-thumb"><video autoplay muted loop playsinline preload="metadata" poster="assets/fem/fem-cover.jpg" aria-label="Finite element analysis result slideshow"><source src="assets/fem/fem-preview.mp4" type="video/mp4"></video></div>
+              <div class="project-body">
+                <h3 class="project-title">Applied Finite Element Analysis</h3>
+                <p class="project-category">HyperMesh · OptiStruct · Stress analysis · Modal analysis · Buckling</p>
+                <p class="project-summary">Completed two TU Wien FEM project sequences covering meshing, boundary-condition modelling, stress/deformation evaluation, beam-solid coupling, modal analysis, and linear buckling checks.</p>
+                <div class="project-links"><a class="project-more" href="linked_posts/applied-fem.html">Details <span aria-hidden="true">-&gt;</span></a></div>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-thumb"><video autoplay muted loop playsinline preload="metadata" poster="assets/mbd/mbd-cover.jpg" aria-label="SIMPACK garage door multibody animation"><source src="assets/mbd/garage-door-simpack.mp4" type="video/mp4"></video></div>
+              <div class="project-body">
+                <h3 class="project-title">Garage Door Multibody Dynamics</h3>
+                <p class="project-category">Lagrange equations · MATLAB ode45 · SIMPACK · Bearing-force recovery</p>
+                <p class="project-summary">Modelled a constrained garage-door mechanism analytically and in SIMPACK, solved the nonlinear motion for multiple spring constants, and compared trajectories and bearing forces.</p>
+                <div class="project-links"><a class="project-more" href="linked_posts/garage-door-multibody-dynamics.html">Details <span aria-hidden="true">-&gt;</span></a></div>
               </div>
             </article>
           </div>
@@ -161,7 +199,7 @@
           <h2 class="section-title"><span class="num">04.</span> Education</h2>
           <ol class="timeline">
             <li class="timeline-item">
-              <div class="timeline-logo-cell"><span class="timeline-logo timeline-logo--text">ETH</span></div>
+              <div class="timeline-logo-cell"><img class="timeline-logo" src="assets/eth-logo.svg" alt="ETH Zurich" loading="lazy"></div>
               <div class="timeline-main">
                 <div class="timeline-period">2024 - 2026</div>
                 <div class="timeline-body">
@@ -171,7 +209,7 @@
               </div>
             </li>
             <li class="timeline-item">
-              <div class="timeline-logo-cell"><span class="timeline-logo timeline-logo--text">TU</span></div>
+              <div class="timeline-logo-cell"><img class="timeline-logo" src="assets/tu-wien-logo.png" alt="TU Vienna" loading="lazy"></div>
               <div class="timeline-main">
                 <div class="timeline-period">2021 - 2024</div>
                 <div class="timeline-body">

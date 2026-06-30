@@ -18,8 +18,12 @@
         <p class="detail-kicker">Project · Master Thesis</p>
         <h1>Dual-Arm Assembly Grasp Planning</h1>
         <p class="detail-subtitle">KUKA iiwa 7 · Assembly · Constraint filtering · RL control</p>
+        <figure class="detail-media detail-media--hero">
+          <img src="../assets/dual-arm-assembly/cover.jpg" alt="Dual-arm assembly setup with KUKA iiwa robots" loading="eager">
+          <figcaption>Dual-arm assembly setup for the master thesis project.</figcaption>
+        </figure>
         <p>My master thesis focuses on task-aware grasp planning and execution for autonomous dual-arm assembly on two KUKA iiwa 7 robots. The central problem is that a grasp can be geometrically valid but still useless for assembly if it blocks the motion, violates constraints, or prevents the second arm from completing the task.</p>
-        <p>The pipeline generates part-specific grasps offline, filters them for assembly feasibility through constraint satisfaction, and selects feasible grasps online from estimated object poses. The execution side connects this selection process to an RL-based real-robot controller.</p>
+        <p>The pipeline generates part-specific grasps offline, filters them for assembly feasibility through constraint satisfaction, and selects feasible grasps online from estimated object poses. The execution side connects the selected grasp to an RL-based real-robot controller on the KUKA iiwa 7 setup.</p>
         <p>The work combines manipulation planning, feasibility filtering, pose-driven online selection, and real-robot execution. The emphasis is on making grasp choice depend on the downstream assembly task rather than treating grasping as an isolated problem.</p>
 
       </article>

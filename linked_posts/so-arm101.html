@@ -19,8 +19,8 @@
         <h1>SO-ARM101 Robot Learning</h1>
         <p class="detail-subtitle">ACT · Diffusion policy · VLA · DAgger · Isaac Lab · Nano World Model</p>
         <p>This project focused on learning real-world visuomotor pick-and-place behavior on a camera-instrumented SO-ARM101 arm. I used it as a compact hardware platform for comparing policy-learning approaches under realistic sensing and execution constraints.</p>
-        <p>I compared ACT, diffusion policies, a VLA model, and DAgger-style data aggregation for the same manipulation setting. The goal was not just to train one successful policy, but to understand where each approach breaks down when moving from demonstrations to real execution.</p>
-        <p>In parallel, I built an Isaac Lab reinforcement-learning pick-and-place pipeline from scratch, including privileged-teacher/student distillation. I also fine-tuned a Nano World Model on public and self-collected robot data to explore how predictive models can support policy learning and evaluation.</p>
+        <p>I compared ACT, diffusion policies, a VLA model, and DAgger-style data aggregation on the same manipulation setting. The goal was not just to train one successful policy, but to see how each approach handled camera observations, limited demonstrations, compounding errors, and the gap between offline data and real execution.</p>
+        <p>In parallel, I built an Isaac Lab reinforcement-learning pick-and-place pipeline from scratch. I trained a privileged-state teacher policy, distilled it into a visual-motor student, and fine-tuned a Nano World Model on public robot data plus self-collected SO-ARM101 data to explore how predictive models can support policy learning and evaluation.</p>
 
       </article>
     </main>

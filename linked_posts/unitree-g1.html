@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#F5F4EF">
-    <title>Unitree G1 Control Interface | Christof Wellan</title>
+    <title>Unitree G1 EPFL Hackathon - 2nd Place | Christof Wellan</title>
     <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,11 +16,40 @@
       <a class="detail-back" href="../index.html#projects"><span aria-hidden="true">&lt;-</span> Back</a>
       <article class="detail-article">
         <p class="detail-kicker">Project · EPFL Robohack 2026</p>
-        <h1>Unitree G1 Control Interface</h1>
-        <p class="detail-subtitle">2nd place · Kimodo-G1 · MuJoCo · Meta Quest teleoperation</p>
+        <h1>Unitree G1 EPFL Hackathon - 2nd Place</h1>
+        <p class="detail-subtitle">EPFL Robohack 2026 · Kimodo-G1 · MuJoCo · Meta Quest teleoperation</p>
+
+        <figure class="detail-media detail-media--portrait">
+          <video controls preload="metadata" poster="../assets/epfl-hack/g1-cover.jpg">
+            <source src="../assets/epfl-hack/g1-preview.mp4" type="video/mp4">
+          </video>
+          <figcaption>First five seconds of the Unitree G1 demo video used as the project preview.</figcaption>
+        </figure>
         <p>At EPFL Robohack 2026, I worked on a control interface for the Unitree G1 humanoid and our team won 2nd place. The interface let users run predefined motions, generate new motions from text prompts with Kimodo-G1, preview them in MuJoCo, and deploy approved motions on the real robot.</p>
-        <p>The practical focus was keeping a human in the loop between generation and hardware execution. Motions could be inspected in simulation before running on the robot, reducing the risk of sending unsafe or unusable commands directly to the platform.</p>
-        <p>I also built a Meta Quest teleoperation pipeline and collected demonstration data for future imitation learning. That gave the project both an immediate control interface and a path toward learning from human-guided humanoid behavior.</p>
+
+        <div class="detail-video-grid" aria-label="EPFL Robohack images">
+          <figure class="detail-media">
+            <img src="../assets/epfl-hack/hack-gui.jpeg" alt="Unitree G1 control studio interface" loading="lazy">
+            <figcaption>Control studio GUI for selecting and previewing generated motions.</figcaption>
+          </figure>
+          <figure class="detail-media">
+            <img src="../assets/epfl-hack/unitree-g1.jpeg" alt="Unitree G1 humanoid at EPFL Robohack" loading="lazy">
+            <figcaption>Unitree G1 platform used during the hackathon.</figcaption>
+          </figure>
+          <figure class="detail-media">
+            <img src="../assets/epfl-hack/team-demo.jpeg" alt="EPFL Robohack Unitree G1 demonstration setup" loading="lazy">
+            <figcaption>Demo setup during EPFL Robohack 2026.</figcaption>
+          </figure>
+        </div>
+        <p>The practical focus was keeping a human in the loop between generation and hardware execution. The system wrapped Kimodo-G1, converted generated motion outputs into the reference format required by the SONIC/GR00T controller, streamed commands with ZMQ, and provided real/sim launch scripts, predefined motion playback, and safety controls. Motions could be inspected in simulation before running on the robot, reducing the risk of sending unsafe or unusable commands directly to the platform.</p>
+
+        <figure class="detail-media detail-media--portrait">
+          <video controls preload="metadata" poster="../assets/epfl-hack/g1-cover.jpg">
+            <source src="../assets/epfl-hack/g1-demo.mp4" type="video/mp4">
+          </video>
+          <figcaption>Compressed full demo video from the hackathon.</figcaption>
+        </figure>
+        <p>I also built a Meta Quest teleoperation pipeline and collected demonstration data for future imitation learning. That gave the project both an immediate control interface and a path toward learning autonomous policies from human-guided humanoid behavior.</p>
 
       </article>
     </main>
