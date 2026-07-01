@@ -17,17 +17,17 @@
       <article class="detail-article">
         <p class="detail-kicker">Project · Independent</p>
         <h1>SO-ARM101 Robot Learning</h1>
-        <p class="detail-subtitle">Real-world imitation learning · Isaac Lab sim-to-real · Nano World Model evaluation</p>
+        <p class="detail-subtitle">Real-world imitation learning · Diffusion policies · Isaac Lab sim-to-real · Nano World Model evaluation</p>
         <figure class="detail-media detail-media--camera">
           <video controls autoplay muted loop playsinline preload="metadata" poster="../assets/so-arm101/deploy-cover.jpg">
             <source src="../assets/so-arm101/deploy-preview.mp4" type="video/mp4">
           </video>
         </figure>
-        <p>This SO-ARM101 project has three connected tracks: real-world imitation learning, Isaac Lab simulation for teacher/student policy learning, and world-model experiments for adapting predictive video models to my robot setup.</p>
+        <p>This SO-ARM101 project combines real-world imitation learning with ACT, VLA, SmolVLA, and diffusion-model policies, Isaac Lab simulation for teacher/student policy learning, and world-model experiments for adapting predictive video models to my robot setup.</p>
 
         <section class="detail-section">
           <h2 class="detail-section-title">Real-World Imitation Learning</h2>
-          <p>I trained and tested ACT-style policies, VLA models, and SmolVLA variants on real SO-ARM101 manipulation data. A large part of the work was practical experimentation: changing objects, testing how policies behaved under slightly different setups, and repeatedly seeing how much teleoperation quality, camera placement, lighting, object visibility, and demonstration consistency affected the resulting behavior.</p>
+          <p>I trained and tested ACT-style policies, diffusion-model imitation policies, VLA models, and SmolVLA variants on real SO-ARM101 manipulation data. A large part of the work was practical experimentation: changing objects, testing how policies behaved under slightly different setups, and repeatedly seeing how much teleoperation quality, camera placement, lighting, object visibility, and demonstration consistency affected the resulting behavior.</p>
           <p>The deployment media below uses the same first 5.5 seconds of a LeRobot smoke run at 30 fps. It records synchronized top and wrist camera streams, commanded actions, and observed robot joint state for the six SO-ARM101 position channels.</p>
 
           <figure class="detail-media detail-media--deployment">
