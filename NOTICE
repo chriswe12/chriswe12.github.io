@@ -1,0 +1,28 @@
+Third-party notices
+===================
+
+This repository contains a personal portfolio site by Christof Wellan.
+
+Portions of the site structure and implementation were adapted from Jihai
+Zhao's personal website:
+
+  https://jihaizhao.github.io/
+  https://github.com/JihaiZhao/jihaizhao.github.io
+
+Original code copyright (c) Jihai Zhao.
+Used under the MIT License. The copyright notice and permission notice from
+the MIT License must be included in copies or substantial portions of the
+software.
+
+Jihai Zhao's site credits its design as inspired by Brittany Chiang:
+
+  https://brittanychiang.com/
+
+This site also includes structure inspired by Ryan Fitzgerald's MIT-licensed
+DevPortfolio template:
+
+  https://github.com/RyanFitzgerald/devportfolio
+
+The root LICENSE file applies to original code in this repository. Third-party
+code or design elements retain their original copyright notices and license
+terms.
