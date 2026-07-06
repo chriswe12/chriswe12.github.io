@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles.css?v=20260629-1">
+    <link rel="stylesheet" href="../styles.css?v=20260706-3">
   </head>
   <body>
     <main class="detail-page">
@@ -28,11 +28,26 @@
         <p>This ETH Robotic Systems Lab semester project built a vision-language-model agent for autonomous high-level excavator planning in Isaac Lab. The task was to clear a rock field in simulation by producing useful high-level decisions rather than directly hand-coding the full behavior.</p>
         <p>The VLM agent interpreted the scene and selected actions, while ROS 2 action servers connected those high-level decisions to low-level control policies. This kept the language-level planning layer separate from the execution layer and made the system easier to test.</p>
 
-        <figure class="detail-media detail-media--wide">
-          <img src="../assets/excavator/agent-structure-clean.png" alt="Excavator VLM planning agent structure without pick-up policy branch" loading="lazy">
-          <figcaption>Implemented agent structure: rock-state extraction, VLM planning, and movement command flow. The unimplemented pick-up/drop policy branch is omitted.</figcaption>
-        </figure>
-        <p>The implemented demo focused on scene interpretation, rock-target selection, high-level planning, and movement command flow in simulation. The pick-up/drop policy was not part of the implemented system.</p>
+        <section class="detail-section detail-section--agent-structure">
+          <h2 class="detail-section-title">Agent Structure</h2>
+          <div class="agent-structure-board">
+            <figure class="detail-media detail-media--diagram agent-structure-diagram">
+              <img src="../assets/excavator/agent-structure-final.png" alt="Agent structure diagram with PlanningAgent, MovingAgent, get locations, move, and pickup command flow" loading="lazy">
+            </figure>
+            <div class="agent-structure-support" aria-label="Agent structure outputs">
+              <figure class="detail-media agent-structure-card agent-structure-card--locations">
+                <img src="../assets/excavator/rock-state-list.png" alt="Rock-state list showing Rock 1, Rock 2, and Rock 3 pose entries with Rock 2 selected" loading="lazy">
+              </figure>
+              <figure class="detail-media agent-structure-card agent-structure-card--move">
+                <img src="../assets/excavator/drive.gif" alt="Driving animation from the project demo" loading="lazy">
+              </figure>
+              <figure class="detail-media agent-structure-card agent-structure-card--pickup">
+                <img src="../assets/excavator/pickup.gif" alt="Pickup animation from the project demo" loading="lazy">
+              </figure>
+            </div>
+          </div>
+          <p>The agent loop is split into three pieces: extracting rock poses, selecting the next target with the planning agent, and delegating executable commands to the moving agent.</p>
+        </section>
 
       </article>
     </main>

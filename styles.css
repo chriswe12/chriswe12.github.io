@@ -767,6 +767,42 @@ p, h1, h2, h3, li, span { overflow-wrap: anywhere; }
   aspect-ratio: 16 / 9;
   object-fit: contain;
 }
+.agent-structure-board {
+  display: grid;
+  gap: 14px;
+  margin: 28px 0 18px;
+}
+.agent-structure-board .detail-media {
+  margin: 0;
+}
+.agent-structure-board img {
+  width: 100%;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  object-fit: contain;
+}
+.agent-structure-support {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+.agent-structure-card--locations img {
+  aspect-ratio: 1481 / 467;
+}
+.agent-structure-card--move img {
+  aspect-ratio: 552 / 444;
+}
+.agent-structure-card--pickup img {
+  aspect-ratio: 800 / 482;
+}
+@media (max-width: 760px) {
+  .agent-structure-support {
+    grid-template-columns: 1fr;
+  }
+}
 .detail-media--portrait video {
   max-height: 720px;
   aspect-ratio: 9 / 16;
