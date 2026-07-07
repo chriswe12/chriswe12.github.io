@@ -17,3 +17,10 @@ Third-party attribution and reuse notices are listed in `NOTICE`.
 - `script.js` keeps the footer year current.
 - `404.html` is the GitHub Pages fallback page.
 - `.nojekyll` tells GitHub Pages to serve the files directly.
+
+
+## Analytics
+
+The site has a shared Google Analytics 4 loader in `script.js`. To enable page-view, geography, click, scroll-depth, and time-on-page reporting, create a GA4 web stream and set `analyticsConfig.googleAnalyticsMeasurementId` to its `G-...` Measurement ID.
+
+Tracking is disabled until that ID is configured. Localhost and direct `file://` views are ignored by default; set `trackLocalhost` to `true` only when testing analytics locally. Visitors can opt out in the browser console with `localStorage.setItem("analytics-opt-out", "true")`.
