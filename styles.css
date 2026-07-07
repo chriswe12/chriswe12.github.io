@@ -728,6 +728,27 @@ p, h1, h2, h3, li, span { overflow-wrap: anywhere; }
 .detail-inline-link:hover {
   color: var(--accent-hover);
 }
+
+.avientus-task-section {
+  margin-top: 42px;
+}
+.avientus-flow-figure {
+  overflow-x: auto;
+}
+.avientus-flow-figure img {
+  width: max(100%, 760px);
+  max-width: none;
+  background: var(--bg);
+  object-fit: contain;
+}
+.avientus-last-mile-grid img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+.avientus-search-rescue-media {
+  width: min(100%, 640px);
+}
 .detail-link-list {
   display: flex;
   flex-wrap: wrap;
